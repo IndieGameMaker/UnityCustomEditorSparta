@@ -10,7 +10,7 @@ public class PlayerStatsEditor : Editor
         var playerStats = (PlayerStats) target; // target as PlayerStats;
         
         // MonoBehaviour 스크립트 필드 
-        
+        EditorGUILayout.ObjectField("스크립트", MonoScript.FromMonoBehaviour((PlayerStats) target), typeof(PlayerStats), false);
         EditorGUILayout.HelpBox("주인공 캐릭터 스텟", MessageType.Info);
         
         // 일반 입력 필드
