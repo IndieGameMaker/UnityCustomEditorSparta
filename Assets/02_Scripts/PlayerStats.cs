@@ -4,15 +4,8 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public int hp = 100;
+    public int mp = 100;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public bool isGodMode = false;
 }
