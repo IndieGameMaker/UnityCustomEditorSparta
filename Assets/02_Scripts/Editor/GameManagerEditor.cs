@@ -11,7 +11,7 @@ public class GameManagerEditor : Editor
         EditorGUILayout.BeginHorizontal();
         if (GUILayout.Button("적 생성"))
         {
-            
+            gameManager.SpawnEnemy();
         }
         
         if (GUILayout.Button("적 제거"))
