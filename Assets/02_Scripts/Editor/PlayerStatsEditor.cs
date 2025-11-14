@@ -22,5 +22,11 @@ public class PlayerStatsEditor : Editor
         {
             playerStats.isGodMode = !playerStats.isGodMode;
         }
+        
+        // 데이터 초기화 버튼
+        if (GUILayout.Button("데이터 초기화"))
+        {
+            playerStats.InitPlayerData();
+        }
     }
 }
