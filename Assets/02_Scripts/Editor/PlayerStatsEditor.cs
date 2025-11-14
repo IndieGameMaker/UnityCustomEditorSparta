@@ -16,5 +16,11 @@ public class PlayerStatsEditor : Editor
         // 일반 입력 필드
         playerStats.hp = EditorGUILayout.IntField("HP", playerStats.hp);
         playerStats.mp = EditorGUILayout.IntSlider("MP", playerStats.mp, 0, 100); // [Range(0, 100)]
+        
+        // 무적 모드 버튼
+        if (GUILayout.Button(playerStats.isGodMode ? "무적모드" : "일반모드"))
+        {
+            playerStats.isGodMode = !playerStats.isGodMode;
+        }
     }
 }
