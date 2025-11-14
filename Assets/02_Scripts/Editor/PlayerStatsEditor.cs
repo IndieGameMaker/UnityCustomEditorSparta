@@ -17,6 +17,7 @@ public class PlayerStatsEditor : Editor
         playerStats.hp = EditorGUILayout.IntField("HP", playerStats.hp);
         playerStats.mp = EditorGUILayout.IntSlider("MP", playerStats.mp, 0, 100); // [Range(0, 100)]
         
+        EditorGUILayout.BeginHorizontal();
         // 무적 모드 버튼
         if (GUILayout.Button(playerStats.isGodMode ? "무적모드" : "일반모드"))
         {
@@ -28,5 +29,6 @@ public class PlayerStatsEditor : Editor
         {
             playerStats.InitPlayerData();
         }
+        EditorGUILayout.EndHorizontal();
     }
 }
