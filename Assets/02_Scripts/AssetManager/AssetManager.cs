@@ -43,6 +43,6 @@ public class AssetManager : MonoBehaviour
         // 어드레서블 해제
         Addressables.Release(loadHandle);
         // 인스턴스 제거
-        Destroy(warriorInstance);
+        DestroyImmediate(warriorInstance);
     }
 }

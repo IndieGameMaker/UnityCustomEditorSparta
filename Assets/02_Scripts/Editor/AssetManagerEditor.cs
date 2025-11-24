@@ -14,5 +14,10 @@ public class AssetManagerEditor : Editor
         {
             assetManager.LoadAssetAsync(assetManager.assetName);
         }
+        
+        if (GUILayout.Button("전사 해제"))
+        {
+            assetManager.UnloadAssetAsync();
+        }
     }
 }
