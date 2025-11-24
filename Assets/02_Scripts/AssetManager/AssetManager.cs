@@ -11,7 +11,7 @@ public class AssetManager : MonoBehaviour
     private AsyncOperationHandle<GameObject> loadHandle;
     
     // 비동기 로드 메소드
-    public void LoadAssetAsync()
+    public void LoadAsset()
     {
         // 로드 메서도
         Addressables.LoadAssetAsync<GameObject>(assetName).Completed += (handle) =>
@@ -24,6 +24,9 @@ public class AssetManager : MonoBehaviour
 
     private void OnEnemyLoaded(AsyncOperationHandle<GameObject> handle)     
     {
-        
+        if (handle.Status == AsyncOperationStatus.Succeeded)
+        {
+            warriorInstance = Instantiate(handle.Result, Vector3.zero, Quaternion.identity);
+        }
     }
 }
