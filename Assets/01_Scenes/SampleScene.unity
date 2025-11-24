@@ -457,7 +457,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 1114397396268769554, guid: 85b3259405ec74a40b08de38f680505d,
     type: 3}
-  player: {fileID: 0}
+  player: {fileID: 824204025331565214}
 --- !u!4 &862614141
 Transform:
   m_ObjectHideFlags: 0
@@ -647,6 +647,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31ad828b4375a43778bfa8ac6467172b, type: 3}
+--- !u!4 &824204025331565214 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4843666865046641289, guid: 31ad828b4375a43778bfa8ac6467172b,
+    type: 3}
+  m_PrefabInstance: {fileID: 824204025331565213}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
