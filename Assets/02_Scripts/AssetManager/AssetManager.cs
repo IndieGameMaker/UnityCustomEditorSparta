@@ -29,4 +29,10 @@ public class AssetManager : MonoBehaviour
             warriorInstance = Instantiate(handle.Result, Vector3.zero, Quaternion.identity);
         }
     }
+
+    public void UnloadAsset()
+    {
+        Addressables.Release(loadHandle);
+        DestroyImmediate(warriorInstance);
+    }
 }
