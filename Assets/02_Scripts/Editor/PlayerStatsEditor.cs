@@ -4,6 +4,8 @@ using UnityEngine;
 [CustomEditor(typeof(PlayerStats))]
 public class PlayerStatsEditor : Editor
 {
+    private const int DAMAGE = 10;
+    
     public override void OnInspectorGUI()
     {
         // 대상 클래스를 추출
@@ -30,5 +32,10 @@ public class PlayerStatsEditor : Editor
             playerStats.InitPlayerData();
         }
         EditorGUILayout.EndHorizontal();
+
+        if (GUILayout.Button($"피격 데미지 {DAMAGE}"))
+        {
+            playerStats.TakeDamage(DAMAGE);
+        }
     }
 }
