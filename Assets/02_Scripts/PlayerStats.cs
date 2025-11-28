@@ -40,5 +40,6 @@ public class PlayerStats : MonoBehaviour, IDamageable
     public void TakeDamage(int damage)
     {
         hp -= damage;
+        healthEventSO.Raise(hp);
     }
 }
