@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,11 +11,29 @@ public class GameManager : MonoBehaviour
     
     public Transform player;
 
+    private void OnEnable()
+    {
+        healthEventSO.Subscribe(OnPlayerDamaged);
+    }
+
+    private void OnDisable()
+    {
+        healthEventSO.Unsubscribe(OnPlayerDamaged);
+    }
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
+    private void OnPlayerDamaged(int hp)
+    {
+        if (hp <= 0)
+        {
+            Debug.Log("게임 오버");
+        }
+    }
+    
     public void SpawnEnemy()
     {
         for (int i = 0; i < 10; i++)

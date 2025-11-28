@@ -457,6 +457,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 1114397396268769554, guid: 85b3259405ec74a40b08de38f680505d,
     type: 3}
+  healthEventSO: {fileID: 11400000, guid: 7ee59da7eab1e4f1da8871b75189ebc9, type: 2}
   player: {fileID: 824204025331565214}
 --- !u!4 &862614141
 Transform:
