@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
 
 public interface IDamageable
 {
@@ -12,8 +14,20 @@ public class PlayerStats : MonoBehaviour, IDamageable
 {
     public int hp = 100;
     public int mp = 100;
-
     public bool isGodMode = false;
+
+    private HealthEventSO healthEventSO;
+
+    private void OnEnable()
+    {
+        Addressables.LoadAssetAsync<ScriptableObject>("HealthEventSO").Completed += (handle) =>
+        {
+            if (handle.Status == AsyncOperationStatus.Succeeded)
+            {
+                healthEventSO = handle.Result as HealthEventSO;
+            }
+        };
+    }
 
     public void InitPlayerData()
     {

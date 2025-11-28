@@ -23,6 +23,11 @@ MonoBehaviour:
     m_SerializedLabels:
     - Character
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7ee59da7eab1e4f1da8871b75189ebc9
+    m_Address: HealthEventSO
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 85b3259405ec74a40b08de38f680505d
     m_Address: EnemyBlue
     m_ReadOnly: 0
