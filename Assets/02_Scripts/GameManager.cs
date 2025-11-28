@@ -5,6 +5,8 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private GameObject enemyPrefab;
+    [SerializeField] private HealthEventSO healthEventSO;
+    
     public Transform player;
 
     void Start()
